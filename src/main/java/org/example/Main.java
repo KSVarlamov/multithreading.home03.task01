@@ -5,9 +5,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
-    private static AtomicInteger counter3 = new AtomicInteger(0);
-    private static AtomicInteger counter4 = new AtomicInteger(0);
-    private static AtomicInteger counter5 = new AtomicInteger(0);
+    private static final AtomicInteger counter3 = new AtomicInteger(0);
+    private static final AtomicInteger counter4 = new AtomicInteger(0);
+    private static final AtomicInteger counter5 = new AtomicInteger(0);
 
     public static void main(String[] args) throws InterruptedException {
         Random random = new Random();
