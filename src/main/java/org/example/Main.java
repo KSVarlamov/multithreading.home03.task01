@@ -17,16 +17,10 @@ public class Main {
         }
         Thread palindrome = new Thread(() -> {
             for (String s : texts) {
-                boolean isPalindrome = true;
-                int length = s.length();
-                for (int i = 0; i < (length / 2); i++) {
-                    if (s.charAt(i) != s.charAt(length - i - 1)) {
-                        isPalindrome = false;
-                        break;
-                    }
-                }
+                StringBuffer sb = new StringBuffer(s);
+                boolean isPalindrome = sb.reverse().toString().equals(s);
                 if (isPalindrome) {
-                    switch (length) {
+                    switch (s.length()) {
                         case 3:
                             counter3.incrementAndGet();
                             break;
